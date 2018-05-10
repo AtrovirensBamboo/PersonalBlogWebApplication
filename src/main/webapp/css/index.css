@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+    text-align: center;
+    color: #30E5FB;
+}
+
+form {
+    text-align: center;
+}
+
+button {
+    position: relative;
+    left: 50px;
+}

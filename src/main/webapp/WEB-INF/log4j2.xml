@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <!-- 输出log文件的地址 -->
+    <Properties>
+        <Property name="filename">/WEB-INF/log4j2.log</Property>
+    </Properties>
+    <Appenders>
+        <Appender name="console" type="Console">
+            <Layout type="PatternLayout" pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <Filter type="Threshold" level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </Appender>
+        <Appender name="randomAccessFile" type="RandomAccessFile" fileName="/WEB-INF/ansyc.log">
+            <Layout type="PatternLayout" pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <Filter type="Threshold" level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </Appender>
+    </Appenders>
+
+    <!-- 全局配置，默认所有的Logger都继承此配置 -->
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="console"/>
+            <AppenderRef ref="RandomAccessFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
