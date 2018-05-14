@@ -8,4 +8,5 @@
     <mappers>
         <mapper resource="com/example/dao/user/UserMapper.xml" />
     </mappers>
+
 </configuration>

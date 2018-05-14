@@ -16,9 +16,10 @@
     <!-- 配置log4j的输出路径 -->
     <context-param>
         <param-name>log4jContextName</param-name>
-        <param-value>/WEB-INF/log4j2.xml</param-value>
+        <param-value>classpath:log4j2.xml</param-value>
     </context-param>
 
+    <!-- log4j2配置 -->
     <filter>
         <filter-name>log4jServletFilter</filter-name>
         <filter-class>org.apache.logging.log4j.web.Log4jServletFilter</filter-class>
