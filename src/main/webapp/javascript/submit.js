@@ -9,12 +9,12 @@ function submitForm() {
             data: $("#submitform").serialize(),
             success: function (data) {
                 var answer = data;
-                if (answer["status"] == "success") {
+                if (answer["status"] === "success" ) {
                     window.location.href = "/userInfo.action";
                 } else {
                     //输出用户名相关错误信息
                     if (answer.message != null) {
-                        console.log(answer.message);
+                        window.location.reload(true);
                     }
                 }
             }
@@ -36,7 +36,7 @@ function submitVerify() {
     if(!passwordPattern.test(password)){
         message.push("密码长度必须小于20，可以是任何非空字符!");
     }
-    if (message.length == 0){
+    if (message.length === 0){
         return true;
     }
     alert(message.join());

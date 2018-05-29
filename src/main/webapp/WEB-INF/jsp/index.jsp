@@ -10,14 +10,14 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link href="css/index.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="javascript/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="javascript/submit.js"></script>
+    <link href="/css/index.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/javascript/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/javascript/submit.js"></script>
     <title>登录</title>
 </head>
 
 <body>
-<h1>图书管理系统</h1>
+<h1>博客后台管理</h1>
 <form id="submitform" name="userSubmit">
     <div>Username:<input id="username" type="text" name="username" placeholder="邮箱/用户名" /></div>
     <br />

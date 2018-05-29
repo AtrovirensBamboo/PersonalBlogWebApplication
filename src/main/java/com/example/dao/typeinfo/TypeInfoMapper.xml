@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.typeinfo.TypeInfoDao">
+    <!-- 建立表内容与model属性的映射 -->
+    <resultMap id="typeInfoMap" type="com.example.model.TypeInfo">
+        <result column="id" property="id"></result>
+        <result column="name" property="name"></result>
+        <result column="sort" property="sort"></result>
+    </resultMap>
+    
+    <!-- 查询所有文章分类 -->
+    <select id="queryAllTypeInfo" resultMap="typeInfoMap" >
+        SELECT *
+        FROM type_info
+        ORDER BY id
+    </select>
+
+    <!-- 根据id值查询单条文章分类 -->
+    <select id="querySingleTypeInfoById" resultMap="typeInfoMap" >
+        SELECT *
+        FROM type_info
+        WHERE id = #{id}
+    </select>
+
+    <!-- 根据name值查询单条文章分类 -->
+    <select id="querySingleTypeInfoByName" resultMap="typeInfoMap" >
+        SELECT *
+        FROM type_info
+        WHERE name = #{name}
+    </select>
+
+    <!-- 修改文章分类 -->
+    <update id="updateTypeInfo">
+        UPDATE type_info
+        SET name = #{name},sort = #{sort}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 增加文章分类 -->
+    <insert id="insertTypeInfo">
+        INSERT INTO type_info (sort,name)
+        VALUES (#{sort},#{name})
+    </insert>
+</mapper>

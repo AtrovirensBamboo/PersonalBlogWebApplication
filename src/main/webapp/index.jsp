@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<h1>图书管理系统</h1>
+<h1>博客后台管理</h1>
 <form id="submitform" name="userSubmit">
     <div>Username:<input id="username" type="text" name="username" placeholder="邮箱/用户名" /></div>
     <br />

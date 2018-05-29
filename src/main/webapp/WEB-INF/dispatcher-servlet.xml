@@ -10,7 +10,9 @@
           http://www.springframework.org/schema/mvc
           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+    <!-- 确定注解的扫描package -->
     <context:component-scan base-package="com.example" />
+    <!-- 启用注解 -->
     <mvc:annotation-driven />
 
     <!-- 处理静态资源 -->

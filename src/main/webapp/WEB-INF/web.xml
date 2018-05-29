@@ -16,7 +16,7 @@
     <!-- 配置log4j的输出路径 -->
     <context-param>
         <param-name>log4jContextName</param-name>
-        <param-value>classpath:log4j2.xml</param-value>
+        <param-value>file:src/main/java/log4j2.xml</param-value>
     </context-param>
 
     <!-- log4j2配置 -->

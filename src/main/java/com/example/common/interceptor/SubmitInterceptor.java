@@ -17,7 +17,7 @@ public class SubmitInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object object) {
         //1 获取url内容
         String url = request.getRequestURI();
-        String urlPattern = "(.*userInfo.*)";
+        String urlPattern = "(.*userInfo.*)|(.*userinfo.*)";
         //2 使用正则表达式判断url是否包含userInfo(!!!注意，不是jsp文件名，是映射url路径名)
         boolean isMatch = Pattern.matches(urlPattern,url);
         if (isMatch){

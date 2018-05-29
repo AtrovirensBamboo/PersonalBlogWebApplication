@@ -1,5 +1,6 @@
 package com.example.model;
 
+
 public class SubmitResult {
     //状态信息，成功：success，失败：failed
     private String status;
@@ -21,4 +22,5 @@ public class SubmitResult {
     public String getMessage() {
         return message;
     }
+
 }

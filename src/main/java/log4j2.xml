@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration xmlns="http://logging.apache.org/log4j/2.0/config" strict="true">
+<Configuration strict="true">
     <!-- 该xml文件必需放在java源文件路径下，否则编译后将出现无法找到该配置文件的错误 -->
     <!-- 输出log文件的地址 -->
     <Properties>
-        <Property name="filename">E:/java/spring/BookAdministration/src/main/webapp/WEB-INF/log4j2/log4j2.log</Property>
+        <Property name="filename">E:\java\spring\BookAdministration\log4j2\log4j2.log</Property>
         <Property name="pattern">%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Property>
     </Properties>
     <Appenders>
@@ -16,7 +16,7 @@
         <Appender name="file" type="RandomAccessFile" fileName="${filename}">
             <Layout type="PatternLayout" pattern="${pattern}"/>
             <Filters>
-                <Filter type="ThresholdFilter" level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+                <Filter type="ThresholdFilter" level="info" onMatch="ACCEPT" onMismatch="DENY"/>
             </Filters>
         </Appender>
     </Appenders>
